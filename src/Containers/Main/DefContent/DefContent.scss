@@ -1,0 +1,49 @@
+.content {
+
+  .head_img {
+    width: 100%;
+    height: calc(100vh - 45px);
+    background-image: url("/Images/house_wall.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .home_cont {
+      margin-bottom: 10%;
+      opacity: 0;
+      transform: translateY(-700px);
+      transition: all ease 1s;
+      text-decoration: none;
+
+      h1 {
+        font-size: 40px;
+        color: #2f2f2f;
+      }
+      button {
+        background-color: transparent;
+        border: 2px solid #2f2f2f;
+        height: 35px;
+        width: 135px;
+        border-radius: 18px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #2f2f2f;
+        transition: all ease .4s;
+
+
+        &:hover {
+          background-color: #2f2f2f;
+          color: white;
+        }
+      }
+    }
+    .opened {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

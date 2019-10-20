@@ -1,0 +1,14 @@
+.prod_head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .product {
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px black;
+    margin: 15px;
+  }
+}

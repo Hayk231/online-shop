@@ -24,7 +24,7 @@ class Header extends Component {
     render() {
         return (
             <div className={classes.header}>
-                <img src={'/Images/head-logo.png'} onClick={this.scrollTopHandler}/>
+                <img src={'/Images/head-logo.png'} onClick={this.scrollTopHandler} alt={'logo'}/>
                 <div className={classes.connect}>
                     {
                     this.props.user ?

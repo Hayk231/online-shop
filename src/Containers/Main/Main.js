@@ -12,8 +12,8 @@ class Main extends Component {
             <div>
                 <Header/>
                 <Switch>
-                    <Route exact path='/' component={DefContent}/>
-                    <Route exact path='/shop' component={ShopHead}/>
+                    <Route exact path='/en' component={DefContent}/>
+                    <Route exact path='/en/shop' component={ShopHead}/>
                     <Route exact path='/admin' component={Admin}/>
                 </Switch>
             </div>

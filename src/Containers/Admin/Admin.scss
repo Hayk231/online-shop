@@ -1,0 +1,118 @@
+.admin {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.78);
+
+  .log_form {
+    width: 350px;
+    height: 320px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    h1 {
+      text-align: left;
+      color: #105b80;
+    }
+
+    p {
+      text-align: left;
+      font-size: 13px;
+      color: #ff1700;
+      transition: all ease .3s;
+    }
+
+    input {
+      background-color: #a0303000;
+      border: 1px solid #42647b4a;
+      height: 30px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 5px;
+      margin: 10px 0;
+    }
+
+    button {
+      height: 30px;
+      border: none;
+      background-color: rgba(12, 92, 128, 0.67);
+      border-radius: 4px;
+      margin: 10px 0;
+      color: white;
+      cursor: pointer;
+      transition: all ease .3s;
+
+      &:hover {
+        background-color: #105b80;
+      }
+    }
+  }
+}
+
+.admin_panel {
+  background-color: #e2e0e0;
+
+  .list_cont {
+    padding: 30px 50px;
+
+    table {
+      width: 100%;
+
+      thead {
+        tr {
+          height: 35px;
+        }
+      }
+    }
+  }
+
+  .admin_add_par {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .admin_add_cont {
+      width: 500px;
+      height: 550px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px;
+      overflow: hidden;
+
+      label {
+        width: 100%;
+        height: 250px;
+
+        input {
+          display: none;
+        }
+        div {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 70px;
+          color: #127db1;
+          font-weight: 100;
+          background-color: #e2f3fe;
+          outline: 1px dashed #127db1;
+          outline-offset: -30px;
+          box-shadow: 0 1px 3px #127db19c;
+        }
+      }
+    }
+  }
+}

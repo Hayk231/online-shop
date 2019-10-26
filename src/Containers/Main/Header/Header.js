@@ -14,10 +14,17 @@ const providers = {
 
 class Header extends Component {
 
+    scrollTopHandler = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
     render() {
         return (
             <div className={classes.header}>
-                <img src={'/Images/head-logo.png'}/>
+                <img src={'/Images/head-logo.png'} onClick={this.scrollTopHandler}/>
                 <div className={classes.connect}>
                     {
                     this.props.user ?

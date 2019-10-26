@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import classes from './App.scss';
 import Main from "./Containers/Main/Main";
+import {Switch, Route} from "react-router-dom";
+
 
 
 class App extends Component{

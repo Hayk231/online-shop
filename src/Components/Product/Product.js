@@ -9,8 +9,10 @@ class Product extends Component {
             <div className={classes.product}>
                 <div className={classes.img_div}> </div>
                 <div className={classes.cont_div}>
-                    <p>name content</p>
-                    <p>price content <FontAwesomeIcon icon={faShoppingCart}/></p>
+                    <FontAwesomeIcon icon={faShoppingCart}/>
+                    <p>Carolina single 04026503</p>
+                    <p>Price</p>
+                    <p>500000 AMD</p>
                 </div>
             </div>
         );

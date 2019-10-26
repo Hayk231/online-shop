@@ -15,9 +15,9 @@ const providers = {
 class Header extends Component {
 
     render() {
-        console.log(this.props.user)
         return (
             <div className={classes.header}>
+                <img src={'/Images/head-logo.png'}/>
                 <div className={classes.connect}>
                     {
                     this.props.user ?

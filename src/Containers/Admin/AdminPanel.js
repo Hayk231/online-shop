@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import classes from './Admin.scss';
+import AdminAdd from "./AdminAdd";
 class AdminPanel extends Component {
     render() {
 
@@ -13,14 +14,7 @@ class AdminPanel extends Component {
 
         return (
             <div className={classes.admin_panel}>
-                <div className={classes.admin_add_par}>
-                    <div className={classes.admin_add_cont}>
-                        <label>
-                            <div>+</div>
-                            <input type='file'/>
-                        </label>
-                    </div>
-                </div>
+                <AdminAdd/>
                 <div>Add product</div>
                 <div className={classes.list_cont}>
                     <table>

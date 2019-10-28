@@ -129,6 +129,8 @@
           height: 30px;
           border: 1px solid #a8c3d4;
           border-radius: 4px;
+          box-sizing: border-box;
+          padding: 5px;
         }
 
         textarea {
@@ -138,6 +140,21 @@
           height: 80px;
           border: 1px solid #a8c3d4;
           border-radius: 4px;
+          box-sizing: border-box;
+          padding: 5px;
+        }
+
+        button {
+          margin-top: 20px;
+          width: 85px;
+          height: 35px;
+          background-color: #127db1;
+          color: white;
+          font-weight: 500;
+          border: none;
+          cursor: pointer;
+          border-radius: 4px;
+          font-size: 15px;
         }
       }
     }

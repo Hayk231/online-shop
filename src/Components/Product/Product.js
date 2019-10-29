@@ -6,13 +6,14 @@ import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 class Product extends Component {
     render() {
         return (
-            <div className={classes.product}>
-                <div className={classes.img_div}> </div>
+            <div className={classes.product} key={this.props.data.id}>
+                <div className={classes.img_div} style={{backgroundImage: `url(${this.props.data.info.imageUrl})`}}> </div>
                 <div className={classes.cont_div}>
                     <FontAwesomeIcon icon={faShoppingCart}/>
-                    <p>Carolina single 04026503</p>
+                    <p>{this.props.data.info.name}</p>
+                    {/*<p>{this.props.data.info.info}</p>*/}
                     <p>Price</p>
-                    <p>500000 AMD</p>
+                    <p>{this.props.data.info.price}</p>
                 </div>
             </div>
         );

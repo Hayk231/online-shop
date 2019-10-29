@@ -2,12 +2,15 @@ import React, {Component} from 'react';
 import classes from './Admin.scss';
 import AdminAdd from "./AdminAdd";
 import firebase from 'firebase';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faTimesCircle} from "@fortawesome/free-regular-svg-icons";
 
 
 class AdminPanel extends Component {
 
     state = {
-        products: []
+        products: [],
+        openAdd: false
     };
 
     componentDidMount() {
@@ -22,12 +25,18 @@ class AdminPanel extends Component {
         });
     }
 
+    hideAdd = (e) => {
+        if (e.target.classList.contains(classes['admin_add_par'])) {
+            this.setState({openAdd: false});
+        }
+    };
+
     render() {
 
         return (
             <div className={classes.admin_panel}>
-                <AdminAdd/>
-                <div>Add product</div>
+                {this.state.openAdd ? <AdminAdd hideAdd={this.hideAdd}/> : null}
+                <div onClick={() => this.setState({openAdd : true})} className={classes.admin_add_cont_top}>Add</div>
                 <div className={classes.list_cont}>
                     <table>
                         <thead>
@@ -43,7 +52,14 @@ class AdminPanel extends Component {
                                 this.state.products.map(el => {
                                     return (
                                         <tr key={el.id}>
-                                            <td><img src={el.info.imageUrl} style={{height: '30px', width: '40px'}} alt='asd'/></td>
+                                            <td>
+                                                {
+                                                    el.info.imageUrl ?
+                                                        <img src={el.info.imageUrl}
+                                                             style={{height: '30px', width: '40px'}} alt='asd'/>
+                                                             : <FontAwesomeIcon icon={faTimesCircle}/>
+                                                }
+                                            </td>
                                             <td>{el.info.name}</td>
                                             <td>{el.info.info}</td>
                                             <td>{el.info.price}</td>

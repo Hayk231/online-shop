@@ -57,16 +57,66 @@
 
 .admin_panel {
   background-color: #e2e0e0;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+
+  .admin_add_cont_top {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    background-color: #62a6f5;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all ease .3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #395f8c;
+      transform: scale(1.1);
+    }
+  }
 
   .list_cont {
     padding: 30px 50px;
 
     table {
-      width: 100%;
+      width: 80%;
+      margin: auto;
 
       thead {
+        background-color: #ffb560;
+        th {
+          font-weight: 600;
+        }
+        th:nth-child(1) {
+          width: 10%;
+        }
+        th:nth-child(2) {
+          width: 20%;
+        }
+        th:nth-child(4) {
+          width: 10%;
+        }
         tr {
           height: 35px;
+        }
+      }
+      tbody {
+        background-color: white;
+
+        tr {
+          height: 35px;
+
+          svg {
+            color: #ff5200;
+            font-size: 18px;
+          }
         }
       }
     }
@@ -90,6 +140,8 @@
       flex-direction: column;
       border-radius: 4px;
       overflow: hidden;
+      transition: all ease .3s;
+      transform: scale(0);
 
       label {
         width: 100%;
@@ -105,13 +157,18 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          box-shadow: 0 1px 3px #127db19c;
+          background-position: center;
+          background-size: cover;
+        }
+
+        .admin_add_img {
           font-size: 70px;
           color: #127db1;
           font-weight: 100;
           background-color: #e2f3fe;
           outline: 1px dashed #127db1;
           outline-offset: -20px;
-          box-shadow: 0 1px 3px #127db19c;
         }
       }
 
@@ -157,6 +214,24 @@
           font-size: 15px;
         }
       }
+
+      .admin_add_del {
+        cursor: pointer;
+        background-color: #ea374a;
+        border: 1px solid #01467082;
+        height: 30px;
+        color: white;
+        font-size: 15px;
+        transition: all ease .3s;
+
+        &:hover {
+          background-color: #a83345;
+        }
+      }
+    }
+
+    .admin_add_cont_opened {
+      transform: scale(1);
     }
   }
 }

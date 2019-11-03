@@ -22,12 +22,11 @@ class Products extends Component {
     }
 
     render() {
-        console.log(this.state.products)
         return (
             <div className={classes.prod_head}>
                 {
                     this.state.products.map(el => {
-                        return <Product data={el}/>
+                        return <Product data={el} key={el.id}/>
                     })
                 }
             </div>

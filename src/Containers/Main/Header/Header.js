@@ -5,6 +5,8 @@ import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from '../../../firebaseConfig';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faShoppingBasket} from "@fortawesome/free-solid-svg-icons";
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
@@ -26,6 +28,7 @@ class Header extends Component {
             <div className={classes.header}>
                 <img src={'/Images/head-logo.png'} onClick={this.scrollTopHandler} alt={'logo'}/>
                 <div className={classes.connect}>
+                    <FontAwesomeIcon icon={faShoppingBasket}/>
                     {
                     this.props.user ?
                         <div>

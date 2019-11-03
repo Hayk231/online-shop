@@ -1,44 +1,25 @@
-import * as actionTypes from './actions';
-
 const initialState = {
-    counter: 0,
-    results: []
+    allData: []
 };
 
 const reducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case actionTypes.INCREMENT :
+        case 'GET_DATA' : {
+            // const finArr = [];
+            // let ref = firebase.database().ref('/products');
+            // ref.on('value', snapshot => {
+            //     const products = snapshot.val();
+            //     for (let key in products) {
+            //         finArr.push({id: key, info : products[key]})
+            //     }
+            // });
             return {
                 ...state,
-                counter: state.counter + 1
+                allData: []
             };
-        case actionTypes.DECREMENT :
-            return {
-                ...state,
-                counter: state.counter - 1
-            };
-        case actionTypes.ADD :
-            return {
-                ...state,
-                counter: state.counter + action.val
-            };
-        case actionTypes.SUBTRACT :
-            return {
-                ...state,
-                counter: state.counter - action.val
-            };
-        case actionTypes.STORE_RESULT:
-            return {
-                ...state,
-                results: state.results.concat({id: new Date(), value: state.counter})
-            };
-        case actionTypes.DELETE_RESULT:
-            const updatedArray = state.results.filter(result => result.id !== action.resultElId);
-            return {
-                ...state,
-                results: updatedArray
-            };
+        }
+
         default : return state
     }
 };

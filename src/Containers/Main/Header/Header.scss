@@ -20,6 +20,14 @@
   }
 
   .connect {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+      font-size: 20px;
+      color: greenyellow;
+    }
 
     .inButt {
       height: 32px;

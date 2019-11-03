@@ -4,14 +4,22 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 
 class Product extends Component {
+
     render() {
+        let backUrl = '/Images/no-image-home.png';
+        if (this.props.data.info.imageUrl) {
+            backUrl = this.props.data.info.imageUrl
+        }
+
         return (
             <div className={classes.product} key={this.props.data.id}>
-                <div className={classes.img_div} style={{backgroundImage: `url(${this.props.data.info.imageUrl})`}}> </div>
+                <div className={classes.img_div}
+                     style={{backgroundImage: `url(${backUrl})`}}>
+                </div>
                 <div className={classes.cont_div}>
                     <FontAwesomeIcon icon={faShoppingCart}/>
                     <p>{this.props.data.info.name}</p>
-                    {/*<p>{this.props.data.info.info}</p>*/}
+                    <p>{this.props.data.info.info}</p>
                     <p>Price</p>
                     <p>{this.props.data.info.price}</p>
                 </div>

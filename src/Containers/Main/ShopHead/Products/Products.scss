@@ -14,17 +14,21 @@
   }
 
   .product {
-    width: 400px;
     height: 500px;
     border-radius: 8px;
     box-shadow: 1px 1px 4px #b7b7b7;
-    margin: 25px;
     background-color: white;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: all ease .3s;
     cursor: pointer;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin: 0 15px 30px;
 
     &:hover{
       transform:scale(1);
@@ -37,7 +41,6 @@
       height: 300px;
       background-size: cover;
       background-position: center;
-      background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
       box-shadow: 0 1px 3px #c1c1c1;
     }
 
@@ -59,11 +62,21 @@
           text-align: left;
         }
         &:nth-child(3) {
+          color: #292828;
+          margin: 15px 0 5px 12px;
+          word-break: break-word;
+          width: 90%;
+          text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        &:nth-child(4) {
           color: #5a5959;
           font-size: 18px;
           margin: 30px 0 5px 12px;
         }
-        &:nth-child(4) {
+        &:nth-child(5) {
           color: #cf1b21;
           font-size: 18px;
           margin: 10px 12px;
@@ -75,7 +88,7 @@
         position: absolute;
         top: 12px;
         right: 15px;
-        font-size: 23px;
+        font-size: 20px;
         color: #cf1b21;
         cursor: pointer;
         transition: all ease .4s;

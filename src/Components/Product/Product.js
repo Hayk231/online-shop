@@ -11,7 +11,7 @@ class Product extends Component {
                 <div className={classes.cont_div}>
                     <FontAwesomeIcon icon={faShoppingCart}/>
                     <p>{this.props.data.info.name}</p>
-                    {/*<p>{this.props.data.info.info}</p>*/}
+                    <p>{this.props.data.info.info}</p>
                     <p>Price</p>
                     <p>{this.props.data.info.price}</p>
                 </div>

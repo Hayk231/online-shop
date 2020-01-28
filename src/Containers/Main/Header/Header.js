@@ -23,6 +23,15 @@ class Header extends Component {
         });
     };
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log(this.props)
+    }
+
+    signInHandler = () => {
+        this.props.signInWithGoogle().then(res => {
+        })
+    };
+
     render() {
         return (
             <div className={classes.header}>
@@ -36,7 +45,7 @@ class Header extends Component {
                             <span>{this.props.user.displayName}</span>
                             <button onClick={this.props.signOut} className={classes.outButt}>Sign Out</button>
                         </div>
-                        : <button onClick={this.props.signInWithGoogle} className={classes.inButt}>Sign In</button>
+                        : <button onClick={this.signInHandler} className={classes.inButt}>Sign In</button>
                     }
                 </div>
             </div>

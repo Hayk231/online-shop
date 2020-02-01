@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import classes from '../../Containers/Main/ShopHead/Products/Products.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {faHeart} from "@fortawesome/free-regular-svg-icons/faHeart";
 
 class Product extends Component {
 
@@ -17,7 +18,7 @@ class Product extends Component {
                      style={{backgroundImage: `url(${backUrl})`}}>
                 </div>
                 <div className={classes.cont_div}>
-                    <FontAwesomeIcon icon={faShoppingCart}/>
+                    <FontAwesomeIcon icon={faHeart}/>
                     <p>{this.props.data.info.name}</p>
                     <p>{this.props.data.info.info}</p>
                     <p>Price</p>

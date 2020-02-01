@@ -7,13 +7,21 @@ import Admin from "../Admin/Admin";
 
 class Main extends Component {
 
+    state = {
+        user: null
+    };
+
+    saveUserHandler = (user) => {
+        this.setState({user: user})
+    };
+
     render() {
         return (
             <div>
-                <Header/>
+                <Header saveUser={this.saveUserHandler}/>
                 <Switch>
                     <Route exact path='/en' component={DefContent}/>
-                    <Route exact path='/en/shop' component={ShopHead}/>
+                    <Route exact path='/en/shop' render={(props) => <ShopHead {...props} loggedUser={this.state.user} />}/>
                     <Route exact path='/admin' component={Admin}/>
                 </Switch>
             </div>

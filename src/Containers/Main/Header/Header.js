@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import classes from './Header.scss';
+import {Link} from "react-router-dom";
 
 import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
@@ -41,8 +42,8 @@ class Header extends Component {
     };
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if(prevProps.user !== this.props.user) {
-            this.props.saveUser(this.props.user)
+        if (prevProps.user !== this.props.user ) {
+            this.props.saveUser(this.props.user);
         }
     }
 
@@ -61,11 +62,22 @@ class Header extends Component {
     };
 
     render() {
+        let favours = this.props.userProducts ? this.props.userProducts.length : '';
+
         return (
             <div className={classes.header}>
                 <img src={'/Images/head-logo.png'} onClick={this.scrollTopHandler} alt={'logo'}/>
                 <div className={classes.connect}>
-                    {this.props.user ? <FontAwesomeIcon icon={faHeart}/> : null }
+                    {
+                        this.props.user ?
+                            <Link to='/en/favours'>
+                                <div className={classes.user_favours}>
+                                    <span>{favours}</span>
+                                    <FontAwesomeIcon icon={faHeart}/>
+                                </div>
+                            </Link>
+                            : null
+                    }
                     <div className={classes.connect_cont} ref={ref => this.popRef = ref}>
                         <FontAwesomeIcon icon={faUserCircle} onClick={this.openUserPopup} id='userIcon'/>
                         <div className={classes.user_info} id='userPop'>

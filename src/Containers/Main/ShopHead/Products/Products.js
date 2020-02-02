@@ -22,11 +22,21 @@ class Products extends Component {
     }
 
     render() {
+
         return (
             <div className={classes.prod_head}>
                 {
                     this.state.products.map(el => {
-                        return <Product data={el} key={el.id}/>
+                        let isFavour = false;
+                        if (this.props.userProducts) {
+                            this.props.userProducts.map(userEl => {
+                                if (el.id === userEl.data.id) {
+                                    isFavour = true
+                                }
+                            })
+                        }
+                        return <Product data={el} key={el.id} userId={this.props.userId}
+                                        isFavour={isFavour}/>
                     })
                 }
             </div>

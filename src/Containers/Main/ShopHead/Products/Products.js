@@ -17,6 +17,7 @@ class Products extends Component {
             for (let key in products) {
                 finArr.push({id: key, info : products[key]})
             }
+            console.log(finArr)
             this.setState({products: finArr});
         });
     }

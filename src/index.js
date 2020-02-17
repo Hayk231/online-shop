@@ -12,5 +12,7 @@ import * as serviceWorker from './serviceWorker';
 
 const store = createStore(reducer);
 
-ReactDOM.render(<BrowserRouter><Provider store={store}><App /></Provider></BrowserRouter>, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter basename={process.env.PUBLIC_URL}>
+                    <Provider store={store}><App /></Provider>
+                </BrowserRouter>, document.getElementById('root'));
 serviceWorker.register();

@@ -14,7 +14,7 @@ class App extends Component{
                 <Switch>
                     <Redirect exact from="/" to="/en" />
                     <Route path='/en' component={Main}/>
-                    <Route exact path='/admin' component={Admin}/>
+                    <Route path='/admin' component={Admin}/>
                 </Switch>
             </div>
         );

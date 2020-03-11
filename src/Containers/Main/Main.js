@@ -37,12 +37,12 @@ class Main extends Component {
             <div>
                 <Header saveUser={this.saveUserHandler} userProducts={this.state.userProducts}/>
                 <Switch>
-                    <Route exact path='/en' component={DefContent}/>
-                    <Route exact path='/en/shop' render={(props) =>
+                    <Route exact path='/' component={DefContent}/>
+                    <Route exact path='/shop' render={(props) =>
                         <ShopHead {...props} loggedUser={this.state.user} userProducts={this.state.userProducts}/>
                     }/>
                     <Route exact path='/admin' component={Admin}/>
-                    <Route exact path='/en/favours' render={(props) =>
+                    <Route exact path='/favours' render={(props) =>
                         <Favours {...props} userProducts={this.state.userProducts} user={this.state.user}/>
                     }/>
                 </Switch>

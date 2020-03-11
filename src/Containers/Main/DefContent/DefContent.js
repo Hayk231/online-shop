@@ -16,7 +16,7 @@ class DefContent extends Component {
                 <div className={classes.head_img}>
                     <div className={classes.home_cont} ref={ref => this.homeCont = ref}>
                         <h1>Welcome to our online store</h1>
-                        <Link to={'/en/shop'}><button>Start Shopping</button></Link>
+                        <Link to={'/shop'}><button>Start Shopping</button></Link>
                     </div>
                 </div>
             </div>

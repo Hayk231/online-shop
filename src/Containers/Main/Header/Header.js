@@ -34,13 +34,6 @@ class Header extends Component {
         }
     };
 
-    scrollTopHandler = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
-
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.user !== this.props.user ) {
             this.props.saveUser(this.props.user);
@@ -66,11 +59,13 @@ class Header extends Component {
 
         return (
             <div className={classes.header}>
-                <img src={'/Images/head-logo.png'} onClick={this.scrollTopHandler} alt={'logo'}/>
+                <Link to={'/shop'} style={{height: '100%'}}>
+                    <img src={'/Images/head-logo.png'} alt={'logo'}/>
+                </Link>
                 <div className={classes.connect}>
                     {
                         this.props.user ?
-                            <Link to='/en/favours'>
+                            <Link to='/favours'>
                                 <div className={classes.user_favours}>
                                     <span>{favours}</span>
                                     <FontAwesomeIcon icon={faHeart}/>

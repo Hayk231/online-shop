@@ -165,6 +165,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
     .admin_add_cont {
       width: 500px;
@@ -267,5 +268,24 @@
     .admin_add_cont_opened {
       transform: scale(1);
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .list_cont {
+    padding: 30px 10px!important;
+
+    table {
+      width: 100%!important;
+      margin: auto!important;
+    }
+  }
+
+  .admin_add_cont {
+    height: 510px!important;
+  }
+
+  .admin_add_inputs button{
+    margin-top: 10px!important;
   }
 }

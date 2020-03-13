@@ -1,12 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import classes from './Products.scss';
 import Product from "../../../../Components/Product/Product";
+import Spinner from "../../../../Components/Spinner/Spinner";
 import firebase from "firebase";
 
 class Products extends Component {
 
     state = {
-        products: []
+        products: null
     };
 
     componentDidMount() {
@@ -17,7 +18,6 @@ class Products extends Component {
             for (let key in products) {
                 finArr.push({id: key, info : products[key]})
             }
-            console.log(finArr)
             this.setState({products: finArr});
         });
     }
@@ -25,22 +25,29 @@ class Products extends Component {
     render() {
 
         return (
-            <div className={classes.prod_head}>
+            <Fragment>
                 {
-                    this.state.products.map(el => {
-                        let isFavour = false;
-                        if (this.props.userProducts) {
-                            this.props.userProducts.map(userEl => {
-                                if (el.id === userEl.data.id) {
-                                    isFavour = true
-                                }
-                            })
-                        }
-                        return <Product data={el} key={el.id} userId={this.props.userId}
-                                        isFavour={isFavour}/>
-                    })
+                    this.state.products ?
+                        <div className={classes.prod_head}>
+                            {
+                                this.state.products.map(el => {
+                                    let isFavour = false;
+                                    if (this.props.userProducts) {
+                                        this.props.userProducts.map(userEl => {
+                                            if (el.id === userEl.data.id) {
+                                                isFavour = true
+                                            }
+                                        })
+                                    }
+                                    return <Product data={el} key={el.id} userId={this.props.userId}
+                                                    isFavour={isFavour}/>
+                                })
+                            }
+                        </div>
+                        :
+                        <Spinner/>
                 }
-            </div>
+            </Fragment>
         );
     }
 }

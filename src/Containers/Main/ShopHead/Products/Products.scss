@@ -7,7 +7,7 @@
   &:hover {
 
     .product {
-      filter:blur(3px);
+      //filter:blur(3px);
       opacity:.5;
       transform: scale(.98);
     }
@@ -32,7 +32,7 @@
 
     &:hover{
       transform:scale(1);
-      filter:blur(0px);
+      //filter:blur(0px);
       opacity:1;
     }
 
@@ -98,6 +98,19 @@
           transform: scale(1.2);
         }
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .prod_head {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    .product {
+      max-width: 100%;
+      height: 400px;
     }
   }
 }

@@ -30,8 +30,12 @@ class AdminPanel extends Component {
         });
     }
 
-    hideAdd = (e) => {
-        if (e.target.classList.contains(classes['admin_add_par'])) {
+    hideAdd = (e, isButt) => {
+        if (!isButt) {
+            if (e.target.classList.contains(classes['admin_add_par'])) {
+                this.setState({openAdd: false});
+            }
+        } else {
             this.setState({openAdd: false});
         }
     };

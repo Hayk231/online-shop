@@ -26,7 +26,6 @@ class AdminAdd extends Component {
     };
 
     addProductHandler = () => {
-        debugger
         if (this.nameRef.value && this.descRef.value && this.priceRef.value) {
             const file = this.imageInput.files[0];
             if (file) {
@@ -48,6 +47,8 @@ class AdminAdd extends Component {
                     info: this.descRef.value,
                     price: this.priceRef.value,
                     imageUrl: ''
+                }).then(res => {
+                    this.props.hideAdd(null, true)
                 })
             }
         } else {

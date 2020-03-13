@@ -60,7 +60,7 @@ class Header extends Component {
         return (
             <div className={classes.header}>
                 <Link to={'/shop'} style={{height: '100%'}}>
-                    <img src={'/Images/head-logo.png'} alt={'logo'}/>
+                    <img src={process.env.PUBLIC_URL + '/Images/head-logo.png'} alt={'logo'}/>
                 </Link>
                 <div className={classes.connect}>
                     {

@@ -13,7 +13,7 @@ class DefContent extends Component {
     render() {
         return (
             <div className={classes.content}>
-                <div className={classes.head_img}>
+                <div className={classes.head_img} style={{backgroundImage : `url(${process.env.PUBLIC_URL + "/Images/house_wall.jpg"})`}}>
                     <div className={classes.home_cont} ref={ref => this.homeCont = ref}>
                         <h1>Welcome to our online store</h1>
                         <Link to={'/shop'}><button>Start Shopping</button></Link>

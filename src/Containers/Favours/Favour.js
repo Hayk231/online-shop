@@ -11,7 +11,7 @@ class Favour extends Component {
     };
 
     render() {
-        let backUrl = this.props.showData.imageUrl || '/Images/no-image-home.png'
+        let backUrl = this.props.showData.imageUrl || process.env.PUBLIC_URL + '/Images/no-image-home.png';
         return (
             <div className={classes.favour_child}>
                 <div style={{backgroundImage: `url(${backUrl})`}} className={classes.favour_child_img}> </div>

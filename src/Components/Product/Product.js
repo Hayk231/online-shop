@@ -16,7 +16,7 @@ class Product extends Component {
     };
 
     render() {
-        let backUrl = '/Images/no-image-home.png';
+        let backUrl = process.env.PUBLIC_URL + '/Images/no-image-home.png';
         if (this.props.data.info.imageUrl) {
             backUrl = this.props.data.info.imageUrl
         }

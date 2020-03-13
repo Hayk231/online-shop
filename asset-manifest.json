@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/online-shop/static/css/main.f4b4d567.chunk.css",
-    "main.js": "/online-shop/static/js/main.d68567e4.chunk.js",
-    "main.js.map": "/online-shop/static/js/main.d68567e4.chunk.js.map",
+    "main.js": "/online-shop/static/js/main.58ef47b7.chunk.js",
+    "main.js.map": "/online-shop/static/js/main.58ef47b7.chunk.js.map",
     "runtime~main.js": "/online-shop/static/js/runtime~main.cbb09e6a.js",
     "runtime~main.js.map": "/online-shop/static/js/runtime~main.cbb09e6a.js.map",
     "static/js/2.82708d16.chunk.js": "/online-shop/static/js/2.82708d16.chunk.js",
     "static/js/2.82708d16.chunk.js.map": "/online-shop/static/js/2.82708d16.chunk.js.map",
     "index.html": "/online-shop/index.html",
-    "precache-manifest.48605b0a331a05a9be21b6571bab4fa1.js": "/online-shop/precache-manifest.48605b0a331a05a9be21b6571bab4fa1.js",
+    "precache-manifest.d521c1d9c2192af0f055551a18c29d72.js": "/online-shop/precache-manifest.d521c1d9c2192af0f055551a18c29d72.js",
     "service-worker.js": "/online-shop/service-worker.js",
     "static/css/main.f4b4d567.chunk.css.map": "/online-shop/static/css/main.f4b4d567.chunk.css.map"
   }

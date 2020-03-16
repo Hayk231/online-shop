@@ -41,7 +41,10 @@ class Main extends Component {
                     <Route exact path='/shop' render={(props) =>
                         <ShopHead {...props} loggedUser={this.state.user} userProducts={this.state.userProducts}/>
                     }/>
-                    <Route exact path='/admin' component={Admin}/>
+                    {/*<Route exact path='/admin' component={Admin} user={this.state.user}/>*/}
+                    <Route exact path='/admin' render={(props) =>
+                        <Admin {...props} user={this.state.user}/>
+                    }/>
                     <Route exact path='/favours' render={(props) =>
                         <Favours {...props} userProducts={this.state.userProducts} user={this.state.user}/>
                     }/>

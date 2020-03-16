@@ -13,11 +13,13 @@
     overflow: hidden;
 
     .home_cont {
-      margin-bottom: 10%;
+      bottom: 45%;
       opacity: 0;
       transform: translateY(-700px);
       transition: all ease 1s;
       text-decoration: none;
+      position: absolute;
+      z-index: 2;
 
       h1 {
         font-size: 40px;
@@ -41,6 +43,17 @@
         }
       }
     }
+
+    .back_over {
+      width: 100%;
+      height: calc(100vh - 55px);
+      overflow: hidden;
+      background: #fff1e0;
+      position: absolute;
+      opacity: .6;
+      z-index: 1;
+    }
+
     .opened {
       opacity: 1;
       transform: translateY(0);

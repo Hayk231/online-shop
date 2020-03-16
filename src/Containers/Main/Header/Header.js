@@ -56,7 +56,6 @@ class Header extends Component {
 
     render() {
         let favours = this.props.userProducts ? this.props.userProducts.length : '';
-
         return (
             <div className={classes.header}>
                 <Link to={'/shop'} style={{height: '100%'}}>

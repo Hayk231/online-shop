@@ -3,41 +3,19 @@ import classes from './Admin.scss';
 import info from './LogPass';
 import AdminPanel from "./AdminPanel";
 
+let uid = "JCJ3hwA0fANJ2t32sj5hbpph8Dm1";
+
 class Admin extends Component {
-
-    state = {
-        isOpened: false,
-        correct: 'none'
-    };
-
-    openAdmin = (e) => {
-        e.preventDefault();
-        if (this.logRef.value === info.login && this.passRef.value === info.pass) {
-            this.setState({isOpened: false})
-        } else {
-            this.setState({correct : 'block'})
-        }
-    };
 
     render() {
         return (
-            <Fragment>
-                {
-                    this.state.isOpened ?
-                        <div className={classes.admin}>
-                            <form className={classes.log_form} onSubmit={this.openAdmin}>
-                                <h1>Admin Panel</h1>
-                                <p style={{display: this.state.correct}}>Incorrect Username or Password</p>
-                                <input type='text' placeholder='Username' ref={ref => this.logRef = ref}/>
-                                <input type='password' placeholder='Password'
-                                       ref={ref => this.passRef = ref} autoComplete="on"/>
-                                <button>Sign In</button>
-                            </form>
-                        </div>
-                        :
-                        <AdminPanel/>
-                }
-            </Fragment>
+                <div>
+                    {
+                        this.props.user && this.props.user.uid === uid
+                            ? <AdminPanel/>
+                            : <div>You are not Admin</div>
+                    }
+                </div>
 
         );
     }

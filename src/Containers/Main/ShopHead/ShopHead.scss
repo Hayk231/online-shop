@@ -5,4 +5,28 @@
   height: calc(100vh - 55px);
   overflow-y: auto;
   box-sizing: border-box;
+  position: relative;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #444444db;
+    transition: all ease 1s;
+  }
+
+  .top_scroll {
+    height: 5px;
+    background-color: #e49e42;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    z-index: 1000;
+  }
 }

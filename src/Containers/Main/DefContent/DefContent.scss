@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .content {
 
   .head_img {
@@ -48,10 +52,26 @@
       width: 100%;
       height: calc(100vh - 55px);
       overflow: hidden;
-      background: #fff1e0;
+      background: #fbf5ed;
       position: absolute;
       opacity: .6;
       z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      div {
+        cursor: pointer;
+
+        svg {
+          font-size: 70px;
+          transition: all ease .3s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
     }
 
     .opened {

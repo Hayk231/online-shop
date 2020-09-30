@@ -19,6 +19,7 @@ class AdminPanel extends Component {
     };
 
     componentDidMount() {
+        document.addEventListener('touchmove', this.handleTouch);
         let ref = firebase.database().ref('/products');
         ref.on('value', snapshot => {
             const products = snapshot.val();
@@ -29,6 +30,10 @@ class AdminPanel extends Component {
             this.setState({products: finArr});
         });
     }
+
+    handleTouch = (e) => {
+        console.log(e)
+    };
 
     hideAdd = (e, isButt) => {
         if (!isButt) {

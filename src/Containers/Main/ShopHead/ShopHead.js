@@ -4,10 +4,6 @@ import classes from './ShopHead.scss';
 
 class ShopHead extends Component {
 
-    state = {
-        pageSet: 0,
-    };
-
     componentDidMount() {
         let scrollBar = document.getElementById('topScroll');
         this.shopHead.addEventListener('scroll', (e) => {

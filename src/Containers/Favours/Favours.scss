@@ -63,7 +63,7 @@
     .favour_child_remove {
       height: 100%;
       width: 50px;
-      border-left: 1px solid #c52d23;
+      border-left: 1px solid #ff5148;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -76,7 +76,33 @@
       }
 
       &:hover {
-        background-color: #c52d23;
+        background-color: #ff5148;
+
+        svg {
+          color: #ffffff;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .favour_head {
+    padding: 30px 15px;
+
+    .favour_child {
+      width: 100%;
+
+      .favour_child_img {
+        width: 140px;
+      }
+      .favour_child_cont {
+        width: calc(100% - 180px);
+      }
+      .favour_child_remove {
+        width: 40px;
+        background-color: #ff5148;
 
         svg {
           color: #ffffff;
